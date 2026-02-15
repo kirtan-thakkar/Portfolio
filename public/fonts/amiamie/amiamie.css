@@ -1,0 +1,114 @@
+/* Amiamie Font Family - All Variants */
+
+/* Regular Variants */
+@font-face {
+  font-family: 'Amiamie';
+  src: url('./otf/Amiamie-Regular.otf') format('opentype'),
+       url('./ttf/Amiamie-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amiamie';
+  src: url('./otf/Amiamie-Italic.otf') format('opentype'),
+       url('./ttf/Amiamie-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light Variants */
+@font-face {
+  font-family: 'Amiamie';
+  src: url('./otf/Amiamie-Light.otf') format('opentype'),
+       url('./ttf/Amiamie-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amiamie';
+  src: url('./otf/Amiamie-LightItalic.otf') format('opentype'),
+       url('./ttf/Amiamie-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black/Bold Variants */
+@font-face {
+  font-family: 'Amiamie';
+  src: url('./otf/Amiamie-Black.otf') format('opentype'),
+       url('./ttf/Amiamie-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amiamie';
+  src: url('./otf/Amiamie-BlackItalic.otf') format('opentype'),
+       url('./ttf/Amiamie-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Round Variants (Alternative Family) */
+@font-face {
+  font-family: 'Amiamie Round';
+  src: url('./otf/Amiamie-RegularRound.otf') format('opentype'),
+       url('./ttf/Amiamie-RegularRound.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amiamie Round';
+  src: url('./otf/Amiamie-ItalicRound.otf') format('opentype'),
+       url('./ttf/Amiamie-ItalicRound.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amiamie Round';
+  src: url('./otf/Amiamie-BlackRound.otf') format('opentype'),
+       url('./ttf/Amiamie-BlackRound.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amiamie Round';
+  src: url('./otf/Amiamie-BlackItalicRound.otf') format('opentype'),
+       url('./ttf/Amiamie-BlackItalicRound.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Utility Classes */
+.font-amiamie {
+  font-family: 'Amiamie', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.font-amiamie-round {
+  font-family: 'Amiamie Round', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.font-amiamie-light {
+  font-family: 'Amiamie', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-weight: 300;
+}
+
+.font-amiamie-black {
+  font-family: 'Amiamie', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-weight: 900;
+}
