@@ -99,13 +99,13 @@ const Works = () => {
   ];
 
   // Ongoing project
-  // const ongoingProject = {
-  //   title: "AI Budget Tracker",
-  //   description:
-  //     "An intelligent personal finance application powered by AI to help users track expenses, analyze spending patterns, and make smarter financial decisions.",
-  //   status: "90% Complete",
-  //   tech: ["Next.js", "React", "Node.js", "MongoDB", "OpenAI", "Tailwind CSS"],
-  // };
+  const ongoingProject = {
+    title: "AI Budget Tracker",
+    description:
+      "An intelligent personal finance application powered by AI to help users track expenses, analyze spending patterns, and make smarter financial decisions.",
+    status: "90% Complete",
+    tech: ["Next.js", "React", "Node.js", "MongoDB", "OpenAI", "Tailwind CSS"],
+  };
 
   return (
     <section id="work" className="flex flex-col min-h-screen">
