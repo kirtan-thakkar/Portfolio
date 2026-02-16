@@ -15,19 +15,43 @@ export default function Home() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Simulate loading progress to avoid hydration issues
-    const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(timer);
-          setTimeout(() => setIsLoaded(true), 500);
-          return 100;
-        }
-        return prev + 2;
-      });
-    }, 50);
+    let rafId;
+    let finishTimeoutId;
+    let failsafeTimeoutId;
 
-    return () => clearInterval(timer);
+    const start = performance.now();
+    const durationMs = 2500;
+
+    const tick = (now) => {
+      const elapsed = now - start;
+      const nextProgress = Math.min(100, Math.floor((elapsed / durationMs) * 100));
+      setProgress(nextProgress);
+
+      if (nextProgress < 100) {
+        rafId = requestAnimationFrame(tick);
+      } else {
+        finishTimeoutId = setTimeout(() => setIsLoaded(true), 300);
+      }
+    };
+
+    rafId = requestAnimationFrame(tick);
+
+    const handleLoad = () => setIsLoaded(true);
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad, { once: true });
+    }
+
+    // Failsafe: never let the loader block the UI indefinitely.
+    failsafeTimeoutId = setTimeout(() => setIsLoaded(true), 6000);
+
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      if (finishTimeoutId) clearTimeout(finishTimeoutId);
+      if (failsafeTimeoutId) clearTimeout(failsafeTimeoutId);
+      window.removeEventListener("load", handleLoad);
+    };
   }, []);
 
   return (
