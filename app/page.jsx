@@ -11,10 +11,13 @@ import ContactPage from "./sections/Contact";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [hasMounted, setHasMounted] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    setHasMounted(true);
+
     let rafId;
     let finishTimeoutId;
     let failsafeTimeoutId;
@@ -57,7 +60,7 @@ export default function Home() {
   return (
     <ReactLenis root>
       <div className="relative w-screen min-h-screen">
-        {!isLoaded && (
+        {hasMounted && !isLoaded && (
           <div className="fixed inset-0 z-999 flex flex-col items-center justify-center bg-black text-white transition-opacity duration-700 font-light">
             <p className="mb-4 text-xl tracking-widest animate-pulse">
               Loading {Math.floor(progress)}%
