@@ -8,22 +8,17 @@ import { BlurReveal } from "@/components/ui/blur-reveal";
 const socials = [
   {
     name: "Github",
-    href: "https://github.com/puffyin69", 
+    href: "https://github.com/kirtan-thakkar",
     icon: Github
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/ki", 
+    href: "https://www.linkedin.com/in/kirtan007/",
     icon: Linkedin
   },
   {
-    name: "Twitter",
-    href: "https://twitter.com/yourhandle", // Replace with your Twitter handle
-    icon: Twitter
-  },
-  {
     name: "Instagram",
-    href: "https://instagram.com/yourhandle", // Replace with your Instagram handle
+    href: "https://www.instagram.com/kirtan.p.v.t/",
     icon: Instagram
   }
 ];
