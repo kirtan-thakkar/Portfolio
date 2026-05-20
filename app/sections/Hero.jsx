@@ -10,7 +10,7 @@ const Hero = () => {
   const [canRender3d, setCanRender3d] = useState(false);
   const text = `I help growing brands and startups gain an
 unfair advantage through premium
-results driven webs/apps`;
+results driven apps`;
 
   useEffect(() => {
     const supportsWebGL = () => {
